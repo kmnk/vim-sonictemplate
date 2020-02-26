@@ -182,7 +182,7 @@ function! s:name(default) abort
   if empty(l:name)
     let l:name = a:default
   endif
-  return substitute(l:name, '[^a-zA-Z0-9]', '_', 'g')
+  return substitute(l:name, '[^a-zA-Z0-9\-]', '_', 'g')
 endfunction
 
 function! sonictemplate#apply(name, mode, ...) abort
